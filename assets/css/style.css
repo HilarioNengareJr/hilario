@@ -495,8 +495,24 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text ul{ 
+  margin-bottom: 15px; 
+}
 
+.about-text>ul {
+  margin: 10px;
+}
+
+.about-text li {
+  list-style: disc;
+  padding-inline: 30px;
+}
+
+
+.about-li>li {
+  list-style: decimal;
+  padding-inline: 20px;
+}
 
 
 /**
