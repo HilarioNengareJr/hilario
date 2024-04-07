@@ -504,7 +504,7 @@ main {
 }
 
 .about-text li {
-  list-style: disc;
+  list-style: none;
   padding-inline: 30px;
 }
 
