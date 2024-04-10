@@ -506,7 +506,6 @@ main {
 
 .about-text li {
   list-style: disc;
-  padding-inline: 10px 30px;
 }
 
 
@@ -1381,7 +1380,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .about .article-title { margin-bottom: 20px; }
 
-  .about-text { margin-bottom: 40px; }
+  .about-text { margin-block: 40px; }
 
   /* service */
 
