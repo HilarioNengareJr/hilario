@@ -1769,10 +1769,6 @@ textarea.form-input::-webkit-resizer {
    * SIDEBAR
    */
 
-  .avatar-box img {
-    width: 120px;
-  }
-
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
@@ -1905,7 +1901,10 @@ textarea.form-input::-webkit-resizer {
   }
 
 
-
+  .avatar-box img {
+    width: 120px;
+  }
+  
   /**
    * MAIN 
    */
