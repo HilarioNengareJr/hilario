@@ -175,34 +175,58 @@ function observe(selector, { stagger = false, delay = 0 } = {}) {
 // Resume
 observe('#resume .section-subtitle');
 observe('#resume .section-title', { delay: 0.12 });
-observe('.resume-wrapper > div', { stagger: true, delay: 0.2 });
+observe('.resume-item', { stagger: true, delay: 0.15 });
 
 // Services
 observe('.service .title-wrapper');
-observe('.service .slider', { delay: 0.2 });
+observe('.service .slider-item', { stagger: true, delay: 0.12 });
 
 // Skills
 observe('#skills .section-subtitle');
 observe('#skills .section-title', { delay: 0.12 });
-observe('.skills-wrapper', { delay: 0.24 });
+observe('.skills-wrapper > div:first-child', { delay: 0.2 });
+observe('.skills-list li', { stagger: true, delay: 0.2 });
 
 // Portfolio
 observe('.portfolio .title-wrapper');
-observe('.portfolio .slider', { delay: 0.2 });
-
-// Blog
-observe('#blog .section-subtitle');
-observe('#blog .section-title', { delay: 0.12 });
-observe('.blog-list > li', { stagger: true, delay: 0.2 });
+observe('.portfolio .slider-item', { stagger: true, delay: 0.1 });
 
 // Contact
 observe('#contact .section-subtitle');
 observe('#contact .section-title', { delay: 0.12 });
-observe('.contact-item', { stagger: true, delay: 0.2 });
+observe('.contact-item', { stagger: true, delay: 0.15 });
 
 // Footer
 observe('.footer-list', { stagger: true });
 observe('.social-list', { delay: 0.24 });
+
+
+
+/**
+ * SECTION PROGRESS INDICATOR
+ */
+
+const progressDots = [...document.querySelectorAll('.progress-dot')];
+const progressSections = progressDots.map(function (dot) {
+  return document.querySelector(dot.getAttribute('href'));
+});
+
+function updateProgressDots() {
+  const scrollMid = window.scrollY + window.innerHeight * 0.5;
+
+  let activeIndex = 0;
+  progressSections.forEach(function (section, i) {
+    if (section && section.offsetTop <= scrollMid) activeIndex = i;
+  });
+
+  progressDots.forEach(function (dot, i) {
+    dot.classList.toggle('active', i === activeIndex);
+    dot.classList.toggle('passed', i < activeIndex);
+  });
+}
+
+window.addEventListener('scroll', updateProgressDots);
+updateProgressDots();
 
 
 
@@ -228,3 +252,64 @@ window.addEventListener('scroll', function () {
     parallaxTicking = true;
   }
 });
+
+
+
+/**
+ * SCROLL TO TOP
+ */
+
+const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+});
+
+scrollTopBtn && scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
+/**
+ * SERVICE MODAL
+ */
+
+const serviceModal  = document.getElementById('service-modal');
+const modalIconEl   = document.getElementById('modal-icon-el');
+const modalTitleEl  = document.getElementById('modal-title');
+const modalBodyEl   = document.getElementById('modal-body');
+const modalCloseBtn = document.getElementById('modal-close');
+
+function openServiceModal(link) {
+  modalIconEl.setAttribute('name', link.dataset.modalIcon || '');
+  modalTitleEl.textContent = link.dataset.modalTitle || '';
+  modalBodyEl.textContent  = link.dataset.modalBody  || '';
+  serviceModal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeServiceModal() {
+  serviceModal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.layer-link[data-modal-title]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    openServiceModal(link);
+  });
+});
+
+if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeServiceModal);
+
+serviceModal && serviceModal.addEventListener('click', e => {
+  if (e.target === serviceModal) closeServiceModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeServiceModal();
+});
+
+
+

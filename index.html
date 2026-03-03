@@ -50,7 +50,16 @@
   -->
 
   <div class="preloader" data-preloader>
-    <div class="circle"></div>
+    <div class="skeleton-layout">
+      <div class="skel-image"></div>
+      <div class="skel-content">
+        <div class="skel-line skel-title"></div>
+        <div class="skel-line skel-subtitle"></div>
+        <div class="skel-line skel-text"></div>
+        <div class="skel-line skel-text skel-short"></div>
+        <div class="skel-line skel-btn"></div>
+      </div>
+    </div>
   </div>
 
 
@@ -119,7 +128,7 @@
         <div class="container">
 
           <div class="hero-banner">
-            <img src="./assets/images/hero.png" width="800" height="800" alt="Hilario Nengare" class="w-100">
+            <img src="./assets/images/hero.png" width="800" height="800" alt="Hilario Nengare" class="w-100 hero-img-main">
           </div>
 
           <div class="hero-content">
@@ -134,7 +143,7 @@
               Hi, I’m Hilario Nengare — a software engineer specialising in AI integration, full stack web development, and scalable backend systems. I build products that are fast, intelligent, and built to last.
             </p>
 
-            <a href="./Hilario Nengare CV.pdf" download class="btn has-before">
+            <a href="./Hilario_Nengare_CV.pdf" download class="btn has-before">
               <span class="span">Download CV</span>
 
               <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
@@ -179,10 +188,10 @@
                     </div>
                   </div>
                   <ul class="resume-details">
-                    <li>AI Consulting for Rain: Led end-to-end development of the Ask-Rain AI customer assistant, delivering 5 custom personas at R70,000 each (R350,000 total) with an ongoing R5,000/month maintenance contract.</li>
-                    <li>Built and maintained AI-driven products using OpenAI APIs, LangChain agents, FastAPI, and Next.js with scalable agent workflows and automated pipelines.</li>
-                    <li>Designed production-ready fullstack features using TypeScript, Python, Supabase, and modern UI frameworks.</li>
-                    <li>Collaborated with design, engineering, and leadership to deliver responsive, user-centric enterprise AI solutions.</li>
+                    <li>Integrated and configured AI customer support personas for Rain's Ask-Rain platform, collaborating closely with Rain's AI team and client liaison to align deliverables with business requirements. Part of a multi-persona payout engagement with an ongoing maintenance contract.</li>
+                    <li>Built and maintained automated agent workflows using n8n, OpenAI APIs, and LangChain. Drafted persona audits, test plans, and quality assessments to validate persona behaviour and consistency in production.</li>
+                    <li>Developed AI-driven products and internal tooling using OpenAI APIs, LangChain agents, FastAPI, and Next.js with scalable agent workflows and automated pipelines.</li>
+                    <li>Designed and developed production-ready features across the full stack using TypeScript, Python, Supabase, and modern UI frameworks.</li>
                   </ul>
                 </li>
 
@@ -282,7 +291,10 @@
 
                   <span class="text-lg card-number">01</span>
 
-                  <a href="#" class="layer-link" aria-label="More about my Full Stack Development service"></a>
+                  <a href="#" class="layer-link" aria-label="More about my Full Stack Development service"
+                    data-modal-icon="code-slash-outline"
+                    data-modal-title="Full Stack Development"
+                    data-modal-body="End-to-end web applications using TypeScript, Python, Next.js, and FastAPI. I handle everything from schema design and API architecture to component-level UI — delivering production-ready products with clean, maintainable code."></a>
 
                 </div>
               </li>
@@ -302,7 +314,10 @@
 
                   <span class="text-lg card-number">02</span>
 
-                  <a href="#" class="layer-link" aria-label="More about my AI Integration service"></a>
+                  <a href="#" class="layer-link" aria-label="More about my AI Integration service"
+                    data-modal-icon="hardware-chip-outline"
+                    data-modal-title="AI Integration"
+                    data-modal-body="Custom AI assistants, agent workflows, and RAG pipelines powered by OpenAI, Claude, and LangChain. I embed intelligent features directly into your product — from smart search to autonomous task automation."></a>
 
                 </div>
               </li>
@@ -322,7 +337,10 @@
 
                   <span class="text-lg card-number">03</span>
 
-                  <a href="#" class="layer-link" aria-label="More about my Web App Development service"></a>
+                  <a href="#" class="layer-link" aria-label="More about my Web App Development service"
+                    data-modal-icon="desktop-outline"
+                    data-modal-title="Web App Development"
+                    data-modal-body="Responsive, accessible web apps built with modern frameworks like React, Next.js, and Tailwind. Performance-first, mobile-first, and designed to delight users on every screen size."></a>
 
                 </div>
               </li>
@@ -342,7 +360,10 @@
 
                   <span class="text-lg card-number">04</span>
 
-                  <a href="#" class="layer-link" aria-label="More about my Backend & API Development service"></a>
+                  <a href="#" class="layer-link" aria-label="More about my Backend & API Development service"
+                    data-modal-icon="server-outline"
+                    data-modal-title="Backend & API Development"
+                    data-modal-body="Robust REST APIs and async pipelines built with FastAPI and Python. Designed for scale with clean separation of concerns, comprehensive error handling, and full API documentation."></a>
 
                 </div>
               </li>
@@ -362,7 +383,10 @@
 
                   <span class="text-lg card-number">05</span>
 
-                  <a href="#" class="layer-link" aria-label="More about my Database Design service"></a>
+                  <a href="#" class="layer-link" aria-label="More about my Database Design service"
+                    data-modal-icon="layers-outline"
+                    data-modal-title="Database Design"
+                    data-modal-body="Relational and non-relational data models that keep your app fast and consistent. I work with Supabase, PostgreSQL, and MongoDB — from schema design to query optimisation and indexing strategy."></a>
 
                 </div>
               </li>
@@ -382,7 +406,10 @@
 
                   <span class="text-lg card-number">06</span>
 
-                  <a href="#" class="layer-link" aria-label="More about my UI/UX Implementation service"></a>
+                  <a href="#" class="layer-link" aria-label="More about my UI/UX Implementation service"
+                    data-modal-icon="color-palette-outline"
+                    data-modal-title="UI/UX Implementation"
+                    data-modal-body="Pixel-perfect, accessible interfaces that bridge design and code. I translate Figma files into clean, reusable component libraries with smooth interactions, consistent design tokens, and great developer experience."></a>
 
                 </div>
               </li>
@@ -764,11 +791,11 @@
 
             <li class="contact-item">
               <div class="contact-icon">
-                <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
               </div>
               <div>
-                <p class="contact-label">Portfolio</p>
-                <a href="https://hilarionengare.com" target="_blank" rel="noopener noreferrer" class="contact-value">hilarionengare.com</a>
+                <p class="contact-label">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/hilario-nengare" target="_blank" rel="noopener noreferrer" class="contact-value">linkedin.com/in/hilario-nengare</a>
               </div>
             </li>
 
@@ -844,12 +871,40 @@
 
 
 
-  <!-- 
+  <!-- #SECTION PROGRESS -->
+  <nav class="section-progress" aria-label="Page sections">
+    <a href="#home"      class="progress-dot" data-label="Home"></a>
+    <a href="#resume"    class="progress-dot" data-label="Resume"></a>
+    <a href="#services"  class="progress-dot" data-label="Services"></a>
+    <a href="#skills"    class="progress-dot" data-label="Skills"></a>
+    <a href="#portfolio" class="progress-dot" data-label="Portfolio"></a>
+    <a href="#contact"   class="progress-dot" data-label="Contact"></a>
+  </nav>
+
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </button>
+
+  <!-- SERVICE MODAL -->
+  <div class="service-modal" id="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="service-modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="modal-icon">
+        <ion-icon id="modal-icon-el"></ion-icon>
+      </div>
+      <h3 class="h3 modal-title" id="modal-title"></h3>
+      <p class="modal-body" id="modal-body"></p>
+    </div>
+  </div>
+
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
