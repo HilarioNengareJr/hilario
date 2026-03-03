@@ -1,6 +1,6 @@
-Kane Williams - Web & App Developer
+Hilario Nengare - Web & App Developer
 
-This is a personal portfolio html template made by codewithsadee
+This is a personal portfolio html template made by hilario
 
 
 
@@ -21,12 +21,12 @@ Contact
 
 #---------- HERO ----------#
 
-Kane Williams
+Hilario Nengare
 Creative Web & App Developer
 
-alt = kane williams
+alt = Hilario Nengare
 
-Hi, I’m kane williams and I am creative web & app developer who dream making the world better place by creating captivating products.
+Hi, I’m Hilario Nengare and I am creative web & app developer who dream making the world better place by creating captivating products.
 
 Download CV
 <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
@@ -140,7 +140,7 @@ Latest News
 alt = Get Started With Tiktok Ads.
 
 24
-June 2022
+June 2019
 
 Get Started With Tiktok Ads.
 
@@ -153,7 +153,7 @@ Read more
 alt = UX in Ecommerce – 5 things to avoid.
 
 27
-June 2022
+June 2019
 
 UX in Ecommerce – 5 things to avoid.
 
