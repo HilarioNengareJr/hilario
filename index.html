@@ -12,7 +12,7 @@
   <title>Hilario Nengare — Software Engineer & AI Developer</title>
   <meta name="title"       content="Hilario Nengare — Software Engineer & AI Developer">
   <meta name="description" content="Hilario Nengare is a software engineer specialising in AI integration, full stack web development, and scalable backend systems. Based in Cape Town, South Africa.">
-  <meta name="keywords"    content="Hilario Nengare, software engineer, AI developer, full stack developer, Next.js, FastAPI, Python, TypeScript, Cape Town">
+  <meta name="keywords"    content="Hilario Nengare, Hilario Junior Nengare, Hilario Junior, Junior Nengare, HilarioNengareJr, software engineer, AI developer, full stack developer, Next.js, FastAPI, Python, TypeScript, Cape Town, South Africa">
   <meta name="author"      content="Hilario Nengare">
   <meta name="robots"      content="index, follow">
   <link rel="canonical"    href="https://hilariojr.com/">
@@ -46,8 +46,10 @@
   <!--
     - Favicon
   -->
+  <link rel="icon"           href="./assets/images/logo.png" type="image/png">
   <link rel="shortcut icon"  href="./assets/images/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="./assets/images/logo.png">
+  <link rel="image_src"      href="https://hilariojr.com/assets/images/hero.png">
   <meta name="theme-color"   content="#0f0f14">
 
   <!--
@@ -73,32 +75,79 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Hilario Nengare",
-    "url": "https://hilariojr.com",
-    "image": "https://hilariojr.com/assets/images/hero.png",
-    "jobTitle": "Software Engineer & AI Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "ChitChat AI"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Cape Town",
-      "addressCountry": "ZA"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/hilario-nengare",
-      "https://github.com/HilarioNengareJr"
-    ],
-    "knowsAbout": [
-      "Software Engineering",
-      "AI Integration",
-      "Full Stack Development",
-      "Python",
-      "TypeScript",
-      "Next.js",
-      "FastAPI"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://hilariojr.com/#person",
+        "name": "Hilario Nengare",
+        "alternateName": [
+          "Hilario Junior Nengare",
+          "Hilario Junior",
+          "Junior Nengare",
+          "HilarioNengareJr"
+        ],
+        "url": "https://hilariojr.com",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hilariojr.com/assets/images/hero.png",
+          "width": 800,
+          "height": 800,
+          "caption": "Hilario Nengare — Software Engineer & AI Developer"
+        },
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hilariojr.com/assets/images/logo.png",
+          "caption": "Hilario Nengare logo"
+        },
+        "description": "Software engineer specialising in AI integration, full stack web development, and scalable backend systems. Based in Cape Town, South Africa.",
+        "jobTitle": "Software Engineer & AI Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ChitChat AI"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cape Town",
+          "addressCountry": "ZA"
+        },
+        "sameAs": [
+          "https://hilariojr.com",
+          "https://www.linkedin.com/in/hilario-nengare",
+          "https://github.com/HilarioNengareJr"
+        ],
+        "knowsAbout": [
+          "Software Engineering",
+          "AI Integration",
+          "Full Stack Development",
+          "Python",
+          "TypeScript",
+          "Next.js",
+          "FastAPI",
+          "LangChain",
+          "Supabase",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hilariojr.com/#website",
+        "url": "https://hilariojr.com",
+        "name": "Hilario Nengare",
+        "description": "Portfolio of Hilario Nengare — Software Engineer & AI Developer based in Cape Town.",
+        "publisher": { "@id": "https://hilariojr.com/#person" },
+        "inLanguage": "en-ZA"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://hilariojr.com/#webpage",
+        "url": "https://hilariojr.com",
+        "name": "Hilario Nengare — Software Engineer & AI Developer",
+        "description": "Hilario Nengare is a software engineer specialising in AI integration, full stack web development, and scalable backend systems. Based in Cape Town, South Africa.",
+        "isPartOf": { "@id": "https://hilariojr.com/#website" },
+        "about": { "@id": "https://hilariojr.com/#person" },
+        "inLanguage": "en-ZA",
+        "dateModified": "2026-03-04"
+      }
     ]
   }
   </script>
@@ -142,7 +191,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.png" width="70" height="70" alt="Pfolio home">
+        <img src="./assets/images/logo.png" width="70" height="70" alt="Hilario Nengare">
       </a>
 
       <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
